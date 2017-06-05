@@ -9,17 +9,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zele01.mygeniuskid.MainActivity">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="인식한 단어는 여기에" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="읽어봐"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/desc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아래 단어를 읽어보세요."
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#3c59a5"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="단어"
+            android:id="@+id/wordForRead"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:textAlignment="center"
+            android:textSize="100sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:gravity="bottom"
+            android:layout_weight="0.54">
+
+            <ImageButton
+                android:layout_width="87dp"
+                android:layout_height="85dp"
+                android:id="@+id/imageButton"
+                android:layout_gravity="center"
+                android:src="@drawable/roopy_read"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="다시 읽어볼께요"
+                android:id="@+id/read_again"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
